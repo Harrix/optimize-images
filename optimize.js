@@ -10,7 +10,10 @@ const webp = require("imagemin-webp");
   path = !!path ? path : "images/";
   if (path.substr(-1) != "/") path += "/";
 
-  const files = await imagemin([path + "*.{jpg,jpeg,png,gif,svg,webp}"], path + "/optimized/", {
+  destinationPath = path + "/optimized/";
+
+  const files = await imagemin([path + "*.{jpg,jpeg,png,gif,svg,webp}"], {
+    destination: destinationPath,
     plugins: [
       mozjpeg({ quality: 90, progressive: true }),
       pngquant(),
