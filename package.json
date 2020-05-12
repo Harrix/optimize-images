@@ -16,6 +16,6 @@
     "imagemin-pngquant": "^8.0.0",
     "imagemin-svgo": "^7.1.0",
     "imagemin-webp": "^5.1.0",
-    "jimp": "^0.10.1"
+    "jimp": "^0.10.3"
   }
 }
