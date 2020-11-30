@@ -1,3 +1,3 @@
 # optimize-images
 
-Оптимизация рисунков, включая SVG, PNG через Node.js.
+Оптимизация рисунков, включая SVG, PNG, JPG через Node.js.
