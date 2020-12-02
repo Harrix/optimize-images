@@ -20,8 +20,8 @@ const webp = require("imagemin-webp");
       giflossy(),
       svgo({
         plugins: [{ removeUnknownsAndDefaults: false }, { removeRasterImages: true }, {cleanupIDs: { force: true } }]
-      })
-      //webp({quality: 95})
+      }),
+      webp({quality: 95})
     ]
   });
 
