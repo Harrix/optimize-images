@@ -19,10 +19,10 @@ const webp = require("imagemin-webp");
       pngquant(),
       giflossy(),
       svgo({
-        plugins: [{ removeUnknownsAndDefaults: false }, { removeRasterImages: true }, {cleanupIDs: { force: true } }]
+        plugins: [{ removeUnknownsAndDefaults: false }, { removeRasterImages: true }, { cleanupIDs: { force: true } }],
       }),
-      webp({quality: 95})
-    ]
+      webp({ quality: 95 }),
+    ],
   });
 
   console.log(files);
