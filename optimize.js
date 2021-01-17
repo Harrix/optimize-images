@@ -21,7 +21,7 @@ const webp = require("imagemin-webp");
       svgo({
         plugins: [{ removeUnknownsAndDefaults: false }, { removeRasterImages: true }, { cleanupIDs: { force: true } }],
       }),
-      webp({ quality: 95 }),
+      //webp({ quality: 95 }),
     ],
   });
 
