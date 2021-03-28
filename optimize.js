@@ -3,6 +3,7 @@ const mozjpeg = require("imagemin-mozjpeg");
 const pngquant = require("imagemin-pngquant");
 const giflossy = require("imagemin-giflossy");
 const svgo = require("imagemin-svgo");
+const { extendDefaultPlugins } = require("svgo");
 const webp = require("imagemin-webp");
 
 (async () => {
@@ -19,7 +20,11 @@ const webp = require("imagemin-webp");
       pngquant(),
       giflossy(),
       svgo({
-        plugins: [{ removeUnknownsAndDefaults: false }, { removeRasterImages: true }, { cleanupIDs: { force: true } }],
+        plugins: extendDefaultPlugins([
+          { name: "removeUnknownsAndDefaults", active: false },
+          { name: "removeRasterImages", active: true },
+          { name: "cleanupIDs", force: true },
+        ]),
       }),
       //webp({ quality: 95 }),
     ],
