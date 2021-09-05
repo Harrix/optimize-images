@@ -35,8 +35,6 @@ optimizeFiles(
         name: "preset-default",
         params: {
           overrides: {
-            removeUnknownsAndDefaults: true,
-            removeRasterImages: false,
             cleanupIDs: {
               force: true,
             },
