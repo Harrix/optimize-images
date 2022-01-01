@@ -1,22 +1,22 @@
-const imageminMozjpeg = require("imagemin-mozjpeg");
-const imageminPngquant = require("imagemin-pngquant");
-const imageminGifsicle = require("imagemin-gifsicle");
-const imageminWebp = require("imagemin-webp");
-const imageminSvgo = require("imagemin-svgo");
+import imagemin from "imagemin";
+import imageminMozjpeg from "imagemin-mozjpeg";
+import imageminPngquant from "imagemin-pngquant";
+import imageminGifsicle from "imagemin-gifsicle";
+import imageminWebp from "imagemin-webp";
+import imageminSvgo from "imagemin-svgo";
 
 function optimizeFiles(extension, imageminPlugin) {
   let path = process.argv.slice(2)[0];
   path = !!path ? path : "images/";
-  if (path.substr(-1) != "/") path += "/";
-
-  destinationPath = path + "/optimized/";
+  if (path.slice(-1) != "/") path += "/";
+  let destinationPath = path + "/optimized/";
 
   (async () => {
-    const imagemin = (await import("imagemin")).default;
-    const files = await imagemin([path + extension], {
+    let files = await imagemin([path + extension], {
       destination: destinationPath,
       plugins: [imageminPlugin],
     });
+
     console.log(extension + ":");
     console.log(files);
   })();
