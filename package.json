@@ -1,19 +1,18 @@
 {
   "name": "optimize-images",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "",
   "main": "optimize.js",
+  "type": "module",
   "scripts": {
     "opt": "node optimize.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "imagemin": "^8.0.1",
     "imagemin-gifsicle": "^7.0.0",
-    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^9.0.2",
-    "imagemin-svgo": "^9.0.0",
-    "imagemin-webp": "^6.0.0"
+    "imagemin-svgo": "^10.0.1",
+    "imagemin-webp": "^7.0.0"
   }
 }
