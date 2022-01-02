@@ -9,4 +9,5 @@ Example:
 ```console
 npm run opt
 npm run opt C:\Users\sergi\Desktop\bl
+npm run opt "C:\\Users\\sergi\\Desktop\\bl"
 ```
