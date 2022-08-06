@@ -22,8 +22,8 @@ function optimizeFiles(extension, imageminPlugin) {
   })();
 }
 
-optimizeFiles("*.{jpg,jpeg}", imageminMozjpeg({ quality: 90, progressive: true }));
-// optimizeFiles("*.{jpg,jpeg}", imageminWebp({ quality: 80, method: 6 }));
+//optimizeFiles("*.{jpg,jpeg}", imageminMozjpeg({ quality: 90, progressive: true }));
+optimizeFiles("*.{jpg,jpeg}", imageminWebp({ quality: 80, method: 6 }));
 optimizeFiles("*.png", imageminPngquant());
 optimizeFiles("*.gif", imageminGifsicle());
 optimizeFiles("*.webp", imageminWebp({ quality: 80, method: 6 }));
